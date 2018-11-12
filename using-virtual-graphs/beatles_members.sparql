@@ -1,0 +1,8 @@
+SELECT ?member ?name ?birthDate {
+   GRAPH <virtual://music> {
+      ?band a :Band ;
+            :name "The Beatles" ;
+            :member ?member .
+      ?member :name ?name .
+   }
+}

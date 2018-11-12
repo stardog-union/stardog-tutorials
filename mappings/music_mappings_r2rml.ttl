@@ -1,0 +1,106 @@
+prefix : <http://stardog.com/tutorial/>
+prefix rr: <http://www.w3.org/ns/r2rml#>
+
+:AlbumMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Album{id}" ;
+		rr:class :Album
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :name ;
+		rr:objectMap [ rr:column "name" ]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :date ;
+		rr:objectMap [ rr:column "release_date" ]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :artist ;
+		rr:objectMap [ rr:template "http://stardog.com/tutorial/Artist{artist}" ]
+	] ;
+	rr:logicalTable [ rr:tableName "Album" ] .
+
+:SoloArtistMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Artist{id}" ;
+		rr:class :SoloArtist
+	] ;
+	rr:logicalTable [ rr:sqlQuery "SELECT id FROM Artist WHERE type = 1" ] .
+
+:BandMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Artist{id}" ;
+		rr:class :Band
+	] ;
+	rr:logicalTable [ rr:sqlQuery "SELECT id FROM Artist WHERE type = 2" ] .
+
+:ArtistMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Artist{id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :name ;
+		rr:objectMap [ rr:column "name" ]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :description ;
+		rr:objectMap [ rr:column "description" ]
+	] ;
+	rr:logicalTable [ rr:tableName "Artist" ] .
+
+
+:MembershipMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Artist{id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :name ;
+		rr:objectMap [ rr:column "name" ]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :description ;
+		rr:objectMap [ rr:column "description" ]
+	] ;
+	rr:logicalTable [ rr:tableName "Artist" ] .
+
+:SongMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Song{id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :name ;
+		rr:objectMap [ rr:column "name" ]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :length ;
+		rr:objectMap [ rr:column "length" ]
+	] ;
+	rr:logicalTable [ rr:tableName "Track" ] .
+
+:SongAlbumMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Album{album}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :track ;
+		rr:objectMap [ rr:template "http://stardog.com/tutorial/Song{id}" ]
+	] ;
+	rr:logicalTable [ rr:tableName "Track" ] .
+
+:SongwriterMapping
+    a rr:TriplesMap ;
+	rr:subjectMap [
+		rr:template "http://stardog.com/tutorial/Song{song}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate :writer ;
+		rr:objectMap [ rr:template "http://stardog.com/tutorial/Artist{writer}" ]
+	] ;
+	rr:logicalTable [ rr:tableName "Songwriter" ] .

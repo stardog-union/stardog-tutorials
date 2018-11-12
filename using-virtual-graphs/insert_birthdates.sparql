@@ -1,0 +1,6 @@
+INSERT DATA {
+   :Artist1 :birthDate "1940-10-09"^^xsd:date .
+   :Artist2 :birthDate "1942-06-18"^^xsd:date .
+   :Artist3 :birthDate "1940-07-07"^^xsd:date .
+   :Artist4 :birthDate "1943-02-25"^^xsd:date .      
+}
