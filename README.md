@@ -1,2 +1,3 @@
-# tutorials
-Data that accompanies Stardog tutorials https://www.stardog.com/tutorials/
+# Stardog Tutorial data
+
+This repository contains data, mappings and queries referenced in [Stardog tutorials](https://www.stardog.com/tutorials/). 
