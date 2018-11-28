@@ -1,0 +1,47 @@
+PREFIX : <http://stardog.com/tutorial/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:Person a rdfs:Class .
+
+:Artist a rdfs:Class .
+
+:Band a rdfs:Class ;
+   rdfs:subClassOf :Artist .
+
+:SoloArtist a rdfs:Class ;
+   rdfs:subClassOf :Artist , :Person .
+:Album a rdfs:Class .
+
+:Song a rdfs:Class .
+
+:Songwriter a rdfs:Class ;
+   rdfs:subClassOf :Person .
+
+:name a rdfs:Property ;
+   rdfs:range xsd:string .
+
+:member a rdfs:Property ;
+   rdfs:domain :Band ;
+   rdfs:range :SoloArtist .
+
+:date a rdfs:Property ;
+   rdfs:domain :Album ;
+   rdfs:range xsd:date .
+
+:artist a rdfs:Property ;
+   rdfs:domain :Album ;
+   rdfs:range :Artist .
+
+:track a rdfs:Property ;
+   rdfs:domain :Album ;
+   rdfs:range :Song .
+
+:writer a rdfs:Property ;
+   rdfs:domain :Song ;
+   rdfs:range :Songwriter .
+
+:length a rdfs:Property ;
+   rdfs:domain :Song ;
+   rdfs:range xsd:integer .
