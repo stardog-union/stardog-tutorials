@@ -1,0 +1,8 @@
+SELECT ?year (count(?album) AS ?count) 
+{
+    ?album a :Album ;
+            :date ?date ;
+    BIND (year(?date) AS ?year)
+} 
+GROUP BY ?year
+ORDER BY desc(?count)

@@ -1,0 +1,9 @@
+SELECT *
+{
+   ?album a :Album ;
+          :artist ?artist ;
+          :date ?date 
+   BIND (year(?date) AS ?year)       
+   FILTER (?year >= 1970)
+}
+ORDER BY ?date

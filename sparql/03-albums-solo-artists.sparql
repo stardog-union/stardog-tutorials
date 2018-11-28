@@ -1,0 +1,6 @@
+SELECT *
+{
+   ?album a :Album .
+   ?album :artist ?artist .
+   ?artist a :SoloArtist .
+}

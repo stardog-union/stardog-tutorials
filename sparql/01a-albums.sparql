@@ -1,0 +1,4 @@
+SELECT ?album
+WHERE {
+   ?album rdf:type :Album .
+}

@@ -1,0 +1,4 @@
+SELECT (count(?album) as ?count)
+{
+    ?album a :Album
+}

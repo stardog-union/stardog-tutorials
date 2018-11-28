@@ -1,0 +1,3 @@
+select ?album {
+  ?album :artist/:member? :Paul_McCartney
+}

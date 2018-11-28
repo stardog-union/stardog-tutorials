@@ -1,0 +1,4 @@
+SELECT * {    
+    ?song a :Song .
+    ?song :length ?length .
+}

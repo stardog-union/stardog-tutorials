@@ -1,0 +1,7 @@
+paths 
+    start ?artist = :Paul_McCartney
+    end ?cowriter
+via {
+    ?artist ^:writer/:writer ?cowriter
+}
+order by ?cowriter 

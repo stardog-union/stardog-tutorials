@@ -3,6 +3,8 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+: a owl:Ontology .
+
 :Person a rdfs:Class .
 
 :Artist a rdfs:Class .
@@ -19,29 +21,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :Songwriter a rdfs:Class ;
    rdfs:subClassOf :Person .
 
-:name a rdfs:Property ;
+:name a rdf:Property ;
    rdfs:range xsd:string .
 
-:member a rdfs:Property ;
+:member a rdf:Property ;
    rdfs:domain :Band ;
    rdfs:range :SoloArtist .
 
-:date a rdfs:Property ;
+:date a rdf:Property ;
    rdfs:domain :Album ;
    rdfs:range xsd:date .
 
-:artist a rdfs:Property ;
+:artist a rdf:Property ;
    rdfs:domain :Album ;
    rdfs:range :Artist .
 
-:track a rdfs:Property ;
+:track a rdf:Property ;
    rdfs:domain :Album ;
    rdfs:range :Song .
 
-:writer a rdfs:Property ;
+:writer a rdf:Property ;
    rdfs:domain :Song ;
    rdfs:range :Songwriter .
 
-:length a rdfs:Property ;
+:length a rdf:Property ;
    rdfs:domain :Song ;
    rdfs:range xsd:integer .

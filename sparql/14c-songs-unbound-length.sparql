@@ -1,0 +1,7 @@
+SELECT ?song ?length {    
+    ?song a :Song .
+    OPTIONAL {
+        ?song :length ?length .
+    }
+    FILTER(!bound(?length))
+}

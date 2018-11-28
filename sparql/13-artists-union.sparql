@@ -1,0 +1,7 @@
+SELECT ?name
+{
+    { ?artist a :SoloArtist }
+    UNION
+    { ?artist a :Band }
+    ?artist :name ?name
+}

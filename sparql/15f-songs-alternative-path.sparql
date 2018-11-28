@@ -1,0 +1,3 @@
+select ?song {
+  ?song (^:track/:artist/:member?)|:writer :Paul_McCartney
+}
