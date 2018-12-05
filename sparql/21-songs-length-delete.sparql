@@ -1,0 +1,11 @@
+DELETE {
+    ?song :length ?seconds
+}
+INSERT {
+    ?song :length ?duration
+}
+WHERE {
+    ?song a :Song ;
+         :length ?seconds
+    BIND(?seconds * "PT1S"^^xsd:dayTimeDuration AS ?duration) 
+}

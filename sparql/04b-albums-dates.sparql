@@ -1,0 +1,6 @@
+SELECT *
+{
+   ?album a :Album ;
+          :artist ?artist ;
+          :date ?date .
+}

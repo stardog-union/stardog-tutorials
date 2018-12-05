@@ -1,0 +1,6 @@
+SELECT ?song {    
+    ?song a :Song .
+    FILTER NOT EXISTS {
+        ?song :length ?length .
+    }
+}

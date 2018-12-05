@@ -1,0 +1,8 @@
+paths 
+    start ?artist = "Paul McCartney"
+    end ?cowriter = "Kanye West"
+via {
+    ?song ^:name/:writer/:name ?artist .
+    ?song ^:name/:writer/:name ?cowriter
+}
+order by ?cowriter 

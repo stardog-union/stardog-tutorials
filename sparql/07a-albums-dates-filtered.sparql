@@ -1,0 +1,8 @@
+SELECT *
+{
+   ?album a :Album ;
+          :artist ?artist ;
+          :date ?date 
+   FILTER (?date >= "1970-01-01"^^xsd:date)
+}
+ORDER BY ?date

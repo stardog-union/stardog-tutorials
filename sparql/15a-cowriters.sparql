@@ -1,0 +1,6 @@
+select distinct ?artist ?cowriter
+{
+    ?song :writer ?artist .
+    ?song :writer ?cowriter
+    FILTER (?artist != ?cowriter)
+}

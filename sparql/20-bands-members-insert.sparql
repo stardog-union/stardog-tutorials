@@ -1,0 +1,7 @@
+INSERT {
+    ?member a :BandMember
+}
+WHERE {
+    ?band a :Band ;
+          :member ?member
+}

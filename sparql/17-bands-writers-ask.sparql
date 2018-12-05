@@ -1,0 +1,4 @@
+ASK {
+    ?band a :Band .
+    ?song :writer ?band .
+}

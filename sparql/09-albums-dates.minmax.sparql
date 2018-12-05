@@ -1,0 +1,5 @@
+SELECT (min(?date) as ?minDate) (max(?date) as ?maxDate)
+{
+    ?album a :Album ;
+           :date ?date
+}

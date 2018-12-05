@@ -1,0 +1,9 @@
+PREFIX : <http://stardog.com/tutorial/>
+
+CONSTRUCT {
+    ?member a :BandMember
+}
+WHERE {
+    ?band a :Band ;
+          :member ?member
+}

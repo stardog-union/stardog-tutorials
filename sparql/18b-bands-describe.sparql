@@ -1,0 +1,8 @@
+PREFIX : <http://stardog.com/tutorial/>
+
+DESCRIBE ?band
+WHERE {
+    ?band a :Band ;
+         :name ?name
+    FILTER(contains(?name, "The"))
+}

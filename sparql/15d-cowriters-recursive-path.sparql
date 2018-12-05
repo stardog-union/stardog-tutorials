@@ -1,0 +1,6 @@
+select distinct ?cowriter
+{
+    :Paul_McCartney (^:writer/:writer)+ ?cowriter
+    FILTER (?cowriter != :Paul_McCartney)
+}
+order by ?cowriter

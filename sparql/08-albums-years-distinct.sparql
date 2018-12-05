@@ -1,0 +1,8 @@
+SELECT DISTINCT ?year
+{
+   ?album a :Album ;
+          :artist ?artist ;
+          :date ?date 
+   BIND (year(?date) AS ?year)
+}
+ORDER BY ?year
