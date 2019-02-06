@@ -1,0 +1,15 @@
+DELETE { 
+    ?s ?p ?o 
+}
+INSERT {
+    GRAPH ?type {
+        ?s ?p ?o
+    }
+}
+WHERE {
+    ?s a ?type ;
+       ?p ?o
+    VALUES ?type { :Album :Song }
+};
+
+MOVE DEFAULT TO :People

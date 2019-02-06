@@ -1,0 +1,6 @@
+SELECT * {
+  GRAPH ?g { 
+    ?x a ?type ;
+       :name "The Beatles" .
+  }
+}

@@ -1,0 +1,9 @@
+SELECT * {
+ GRAPH :Album { 
+   ?album a :Album .
+   ?album :artist ?artist .
+ }
+ GRAPH :People { 
+   ?artist a :SoloArtist .
+ }
+}
