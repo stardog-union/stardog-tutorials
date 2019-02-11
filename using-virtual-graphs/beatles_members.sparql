@@ -1,4 +1,4 @@
-SELECT ?member ?name ?birthDate {
+SELECT ?member ?name {
    GRAPH <virtual://music> {
       ?band a :Band ;
             :name "The Beatles" ;
