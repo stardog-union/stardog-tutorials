@@ -31,7 +31,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Songwriter a rdfs:Class ;
    rdfs:label "Songwriter" ;
-   rdfs:comment "A person or a group of people who participated in the creation of song as a composer or a lyricist." .
+   rdfs:comment "A person or a group of people who participated in the creation of song as a composer or a lyricist." ;
+   rdfs:subClassOf :Person .
 
 :name a rdf:Property ;
    rdfs:label "name" ;
