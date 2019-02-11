@@ -1,0 +1,7 @@
+# this query requires reasoning and the music_schema to be loaded
+SELECT * {
+   GRAPH <virtual://music> {
+      ?artist a :Artist ;
+          :name ?name
+   }
+}
