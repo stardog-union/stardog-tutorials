@@ -5,4 +5,3 @@ via {
     ?song :writer ?artist .
     ?song :writer ?cowriter
 }
-order by ?cowriter 
