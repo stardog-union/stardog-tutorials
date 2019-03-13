@@ -1,0 +1,7 @@
+SELECT ?album (group_concat(?date) AS ?dates)
+{
+    ?album a :Album ;
+            :date ?date
+}
+GROUP BY ?album
+HAVING (count(?date) > 1)
