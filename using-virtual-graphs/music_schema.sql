@@ -36,4 +36,4 @@ CREATE TABLE Songwriter (
 	writer INT,
 	FOREIGN KEY (writer) REFERENCES Artist (id),
 	FOREIGN KEY (song) REFERENCES Track (id)
-)
+);
