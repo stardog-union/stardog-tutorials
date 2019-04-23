@@ -1,6 +1,5 @@
 PREFIX : <http://stardog.com/tutorial/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :NameShape a sh:Shape ;
    sh:property [
@@ -26,6 +25,7 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 :AlbumShape a sh:Shape ;
    sh:targetClass :Album ;
    sh:node :NameShape ;
+   sh:not [ sh:class :Song ] ;
    sh:property :AlbumDateShape ;
    sh:property :AlbumArtistShape ;
    sh:property :AlbumTrackShape .
