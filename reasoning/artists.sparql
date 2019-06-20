@@ -1,0 +1,3 @@
+SELECT * {
+    ?artist a :Artist
+}

@@ -1,0 +1,9 @@
+RULE :CowriterRule
+IF {
+   ?song :writer ?artist .
+   ?song :writer ?cowriter
+   FILTER (?artist != ?cowriter)
+}
+THEN {
+   ?artist :cowriter ?cowriter
+}

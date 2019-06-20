@@ -1,0 +1,14 @@
+PREFIX : <http://stardog.com/tutorial/>
+
+[] a owl:Ontology ;
+   rdfs:description "This is a very simple ontology that enriches the base music schema with some example OWL axioms." .
+
+:writerOf owl:inverseOf :writer .
+
+:cowriter owl:propertyChainAxiom (:writerOf :writer) .
+
+:cowriter rdfs:subPropertyOf :connectedTo .
+
+:connectedTo a owl:TransitiveProperty .
+
+:connectedTo a owl:SymmetricProperty .

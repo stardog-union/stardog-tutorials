@@ -1,0 +1,3 @@
+SELECT * {
+    :Paul_McCartney :cowriter ?cowriter
+}
