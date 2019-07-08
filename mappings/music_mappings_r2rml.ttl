@@ -56,17 +56,13 @@ prefix rr: <http://www.w3.org/ns/r2rml#>
 :MembershipMapping
     a rr:TriplesMap ;
 	rr:subjectMap [
-		rr:template "http://stardog.com/tutorial/Artist{id}"
+		rr:template "http://stardog.com/tutorial/Artist{artist}"
 	] ;
 	rr:predicateObjectMap [
-		rr:predicate :name ;
-		rr:objectMap [ rr:column "name" ]
+		rr:predicate :member ;
+		rr:objectMap [ rr:template "http://stardog.com/tutorial/Artist{band}" ]
 	] ;
-	rr:predicateObjectMap [
-		rr:predicate :description ;
-		rr:objectMap [ rr:column "description" ]
-	] ;
-	rr:logicalTable [ rr:tableName "Artist" ] .
+	rr:logicalTable [ rr:tableName "Membership" ] .
 
 :SongMapping
     a rr:TriplesMap ;
