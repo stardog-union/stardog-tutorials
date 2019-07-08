@@ -1,8 +1,6 @@
 SELECT ?member ?name {
    GRAPH <virtual://music> {
-      ?band a :Band ;
-            :name "The Beatles" ;
-            :member ?member .
-      ?member :name ?name .
+        ?band a :Band ; :name "The Beatles" .
+        ?member :member ?band ; :name ?name .
    }
 }
