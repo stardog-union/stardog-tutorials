@@ -54,7 +54,7 @@ FROM SQL {
   SELECT * FROM Membership
 }
 TO {
-  ?band :member ?member
+  ?member :member ?band
 } 
 WHERE {
   BIND(template("http://stardog.com/tutorial/Artist{band}") AS ?band)
