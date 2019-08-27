@@ -1,3 +1,23 @@
+prefix : <http://api.stardog.com/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+### Schema
+:Person a rdf:Class .
+:Band a rdf:Class .
+:Song a rdf:Class .
+
+:memberOf a rdf:Property .
+:memberOf rdfs:domain :Person .
+:memberOf rdfs:range :Band .
+
+:sings a rdf:Property .
+:sings rdfs:domain :Person .
+:sings rdfs:domain :Band .
+:sings rdfs:range :Song .
+
+### Data
 <http://api.stardog.com/David_Bowie> a <http://api.stardog.com/Person> ;
    <http://api.stardog.com/hasName> "David Bowie" .
 <http://api.stardog.com/Brian_Eno> a <http://api.stardog.com/Person> ;
