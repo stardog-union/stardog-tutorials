@@ -1,0 +1,85 @@
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+@prefix ogc: <http://www.opengis.net/def/uom/OGC/1.0/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://blog.stardog.com/geons/> .
+
+:Pentagon a :Location ;
+  rdfs:label "The Pentagon" ;
+  geo:hasGeometry :PentagonGeom .
+:PentagonGeom a geo:Geometry ;
+  geo:asWKT "Point(-77.05526 38.87095)"^^geo:wktLiteral.
+
+:TombOfUnknown a :Location ;
+  rdfs:label "Tomb of the Unknown Soldier" ;
+  geo:hasGeometry :TombOfUnknownGeom .
+:TombOfUnknownGeom a geo:Geometry ;
+  geo:asWKT "Point(-77.0722 38.87622)"^^geo:wktLiteral .
+
+:JeffMem a :Location ;
+  rdfs:label "Jefferson Memorial" ;
+  geo:hasGeometry :JeffMemGeom .
+:JeffMemGeom a geo:Geometry ;
+  geo:asWKT "Point(-77.03633 38.88101)"^^geo:wktLiteral .
+
+:LincolnMem a :Location ;
+  rdfs:label "Lincoln Memorial" ;
+  geo:hasGeometry :LincolnMemGeom .
+:LincolnMemGeom a geo:Geometry ;
+  geo:asWKT "Point(-77.04998 38.88928)"^^geo:wktLiteral .
+
+:WashingtonMon a :Location ;
+  rdfs:label "Washington Monument" ;
+  geo:hasGeometry :WashingtonMonGeom .
+:WashingtonMonGeom a geo:Geometry ;
+  geo:asWKT "Point(-77.03525 38.88956)"^^geo:wktLiteral .
+
+:Capitol a :Location ;
+  rdfs:label "US Capitol Building" ;
+  geo:hasGeometry :CapitolGeom .
+:CapitolGeom a geo:Geometry ;
+  wgs:lat "38.88983"^^xsd:float ;
+  wgs:long "-77.00887"^^xsd:float .
+
+:NatlMall a :Location ;
+  rdfs:label "National Mall" ;
+  geo:hasGeometry :NatlMallGeom .
+:NatlMallGeom a geo:Geometry ;
+  wgs:lat "38.88956"^^xsd:float ;
+  wgs:long "-77.02303"^^xsd:float .
+
+:NASAHQ a :Location ;
+  rdfs:label "NASA Headquarters" ;
+  geo:hasGeometry :NASAHQGeom .
+:NASAHQGeom a geo:Geometry ;
+  wgs:lat "38.882929"^^xsd:float ;
+  wgs:long "-77.016379"^^xsd:float .
+
+:VietnamMem a :Location ;
+  rdfs:label "Vietnam Veterans' Memorial" ;
+  geo:hasGeometry :VietnamMemGeom .
+:VietnamMemGeom a geo:Geometry ;
+  wgs:lat "38.89095"^^xsd:float ;
+  wgs:long "-77.04692"^^xsd:float .
+
+:WhiteHouse a :Location ;
+  rdfs:label "The White House" ;
+  geo:hasGeometry :WhiteHouseGeom .
+:WhiteHouseGeom a geo:Geometry ;
+  wgs:lat "38.89761"^^xsd:float ;
+  wgs:long "-77.03637"^^xsd:float .
+
+
+:Arlington a :Area ;
+  rdfs:label "Arlington, VA" ;
+  geo:hasGeometry :ArlingtonGeom .
+:ArlingtonGeom a geo:Geometry ;
+  geo:asWKT "ENVELOPE(-77.111, -77.052, 38.885, 38.855)"^^geo:wktLiteral .
+
+:DCMetro a :Area ;
+  rdfs:label "DC Metro Area" ;
+  geo:hasGeometry :DCMetroGeom .
+:DCMetroGeom a geo:Geometry ;
+  geo:asWKT "ENVELOPE(-77.2, -77.0, 39, 38.7)"^^geo:wktLiteral .
